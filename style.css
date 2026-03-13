@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: #ccc;
+}
+#container{
+    margin:0 auto;
+    padding:0;
+    min-height:100vh;
+    background: white; 
+    width: 75%;
+    border-left: 14px solid dodgerblue;
+    border-right: 14px solid dodgerblue;
+    padding:26px 32px;
+}
+    
+    
+ #container #title {
+    padding:0;
+    margin:0;
+    text-align: center;
+    
+}
+#form-card{
+    width: 100%;
+    min-height: 350px;
+    
+    margin: 24px 0px;
+    box-shadow: 0 0 10px 0px #ddd;
+    border-radius:16px;
+}
+
+#global{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 29px;
+    
+}
+ .second-input{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    
+}
+.second-input input , #choose-gender{
+    padding: 6px ;
+    border-radius: 8px;
+}
+.second-input label{
+    font-weight: bold;
+}
+#submit{
+    margin-left: 29px;
+    background:deeppink;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    
+}
+#form2{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6px;
+    padding: 29px;
+
+}
+#form2 input{
+    padding: 12px ;
+    border-radius: 8px;
+    width: 40%;
+}
+
+td,th{
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+#gener
+  {
+    padding: 16px 24px;
+     
+    background:deeppink;
+    width: fit-content;
+    font-size: 18px;
+    margin-top: 50px;
+    float: right;
+}
+#school-name{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+#copyright{
+    text-align: center;
+    color: blue;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#warning{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: blue;
+}
+.delbtn{
+    background: red;
+    border-right: 50%;
+    border: none;
+    width: 48px;
+    height: 48px;
+}

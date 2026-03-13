@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">Marksheet Creator</h1>
+      <div id="form-card" class="animate__animated animate__fadeIn">
+        <form id="Mark">
+          <div id="global">
+            <div class="second-input">
+              <label>School logo</label>
+              <input
+                style="border: 1px solid black"
+                src="img"
+                name="schoollogo"
+                type="file"
+                accept="image/*"
+                id="school-pic"
+              />
+            </div>
+            <div class="second-input">
+              <label>School Name</label>
+              <input
+                name="School"
+                type="text"
+                placeholder="Wap shool"
+                id="school-name-input"
+              />
+            </div>
+            <div class="second-input">
+              <label> Tagline</label>
+              <input
+                name="tagline"
+                type="text"
+                placeholder="A creative school"
+                id="tag"
+              />
+            </div>
+          </div>
+          <div id="global">
+            <div class="second-input">
+              <label>Candidate`s image</label>
+              <input
+                name="candidateimage"
+                style="border: 1px solid black"
+                src="img"
+                type="file"
+                accept="image/*"
+                id="student-pic"
+              />
+            </div>
+            <div class="second-input">
+              <label> candidate`s Name</label>
+              <input
+                name="candidatename"
+                type="text"
+                placeholder="umme"
+                id="name"
+              />
+            </div>
+            <div class="second-input">
+              <label> Candidate`s Father</label>
+              <input
+                name="candidateFather"
+                type="text"
+                placeholder="Mr"
+                id="father-name"
+              />
+            </div>
+          </div>
+
+          <div id="global">
+            <div class="second-input">
+              <label>DOB</label>
+              <input
+                name="dob"
+                style="border: 1px solid black"
+                type="date"
+                id="date"
+              />
+            </div>
+            <div class="second-input">
+              <label>Gender</label>
+              <select name="gender" id="choose-gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">other</option>
+              </select>
+            </div>
+            <div class="second-input">
+              <label>Class</label>
+              <input name="class" type="number" placeholder="8" id="class" />
+            </div>
+
+            <div class="second-input">
+              <label>Roll no</label>
+              <input
+                name="rollnumber"
+                type="number"
+                placeholder="8"
+                id="roll"
+              />
+            </div>
+          </div>
+
+          <button id="submit" type="button">
+            <i class="fa fa-plus"></i> &nbsp Add Subject
+          </button>
+
+          <div id="dynamic-area"></div>
+
+         
+        </form>
+      </div>
+      <div id="preview" class="animate__animated animate__fadeIn">
+        <table width="100%">
+          <tr>
+            <th width="150px">
+              <img src="school.png" width="100px" id="sch-pic" />
+            </th>
+            <td align="center">
+              <h1 id="school-name">Software Engneerig School</h1>
+              <span id="tag-line"
+                >A wap institute whose learn web-developer course.!</span
+              >
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%">
+          <tr>
+            <th width="150px">
+              <img src="5850276.png" width="100px" id="stu-pic" />
+            </th>
+            <td>
+              <table border="1" width="100%">
+                <tr>
+                  <th width="200">Student`s Name</th>
+                  <td id="adding-name">khatrine</td>
+                  <th width="200">Father`s Name</th>
+                  <td id="adding-f">Mr.chips</td>
+                </tr>
+                <tr>
+                  <th width="200">DOB</th>
+                  <td id="dob">00 00 0000</td>
+                  <th width="200">Gender</th>
+                  <td id="gendername">Male</td>
+                </tr>
+                <tr>
+                  <th width="200">class</th>
+                  <td id="classname">10th</td>
+                  <th width="200">Roll</th>
+                  <td id="rollname">1</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table width="100%">
+          <tr>
+            <th colspan="3">Subjects</th>
+            <th>Full Marks</th>
+            <th colspan="3">Obtained Marks</th>
+          </tr>
+
+          <tbody id="subject-body"></tbody>
+
+          <tr>
+            <th colspan="5" align="right">Total Marks</th>
+            <td align="center" id="marks">0</td>
+          </tr>
+
+          <tr>
+            <th colspan="2" align="right">Grade</th>
+            <td align="center" id="grade-marks"></td>
+            <th colspan="2" align="right">percentage</th>
+            <td align="center" id="percent">0%</td>
+          </tr>
+        </table>
+      </div>
+
+      <p id="copyright">
+        <i class="fa fa-copyright"></i>This Marksheet is only for learning
+        purpose
+      </p>
+      <p id="warning">Commercial porpose is prohibited| All Right Reversed</p>
+    </div>
+  </body>
+</html>
